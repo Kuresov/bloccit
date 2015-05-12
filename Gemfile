@@ -58,3 +58,6 @@ end
 
 #User Authentication
 gem 'devise'
+
+#Security
+gem 'figaro', '1.0'
