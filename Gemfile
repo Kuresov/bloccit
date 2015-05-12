@@ -13,6 +13,7 @@ end
 group :development do
   gem 'sqlite3'
 end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Bootstrap for CSS
@@ -55,3 +56,5 @@ group :development, :test do
   gem 'spring'
 end
 
+#User Authentication
+gem 'devise'
