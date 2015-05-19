@@ -13,10 +13,20 @@ require 'faker'
 end
 users = User.all
 
+#Create topics
+15.times do
+  Topic.create!(
+      name: Faker::Lorem.sentence,
+      description: Faker::Lorem.paragraph
+  )
+end
+topics = Topic.all
+
 #Create posts
 50.times do
   Post.create!(
     user: users.sample,
+    topic: topics.sample,
     title: Faker::Lorem.sentence,
     body:  Faker::Lorem.paragraph
   )
@@ -31,13 +41,34 @@ posts = Post.all
   )
 end
 
-#Add a user to log in with, for convenience.
-user = User.first
-user.skip_reconfirmation!
-user.update_attributes!(
-  email:    'alex.kirsopp@gmail.com',
-  password: 'password'
+#Add Admin
+admin = User.new(
+  name: "Admin User",
+  email: "admin@bloccit.com",
+  password: "password",
+  role: "admin"
 )
+admin.skip_confirmation!
+admin.save!
+
+#Add Moderator
+moderator = User.new(
+  name: "Moderator User",
+  email: "moderator@bloccit.com",
+  password: "password",
+  role: "moderator"
+)
+moderator.skip_confirmation!
+moderator.save!
+
+#Add Member
+member = User.new(
+  name: "Normal User",
+  email: "user@bloccit.com",
+  password: "password"
+)
+member.skip_confirmation!
+member.save!
 
 puts "Seed finished"
 puts "#{User.count} users created"
