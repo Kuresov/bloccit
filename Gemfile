@@ -64,3 +64,6 @@ gem 'figaro', '1.0'
 
 #Pundit for user roles
 gem 'pundit'
+
+#Redcarpet for Markdown
+gem 'redcarpet'
