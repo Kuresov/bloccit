@@ -38,7 +38,7 @@ class FeaturedUploader < CarrierWave::Uploader::Base
   end
 
   version :small do
-    process :resize_to_fill => [60, 60]
+    process :resize_to_fill => [70, 70]
   end
 
   version :display do
