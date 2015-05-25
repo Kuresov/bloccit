@@ -10,6 +10,9 @@
     <% @posts.each do |post| %>
       <div class="media">
         <div class="media-body">
+          <div class="image-list">
+            <%= image_tag(post.featured.small.url) if post.featured? %>
+          </div>
           <h4 class="media-heading">
             <%= link_to (markdown_to_html post.title), [@topic, post] %>
           </h4>

@@ -13,6 +13,11 @@
     <%= f.label :title %>
     <%= f.text_field :title, class: "form-control", placeholder: "Enter post title" %>
   <% end %>
+  <%= form_group_tag(post.errors[:featured]) do %>
+    <%= f.label :featured %>
+    <%= f.file_field :featured %>
+    <%= f.hidden_field :featured_cache %>
+  <% end %>
   <%= form_group_tag(post.errors[:body]) do %>
     <%= f.label :body %>
     <%= f.text_area :body, rows: 8, class: "form-control", placeholder: "Enter post body" %>
