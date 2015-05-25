@@ -15,7 +15,13 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Vim Swap Files
 .*.sw*
 *.DS_Store
+
 # Ignore application configuration
 /config/application.yml
+
+# CarrierWave Uploads
+public/uploads

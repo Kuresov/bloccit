@@ -67,3 +67,10 @@ gem 'pundit'
 
 #Redcarpet for Markdown
 gem 'redcarpet'
+
+# Carrierwave for image upload, Minimagick for image manipulation
+gem 'carrierwave'
+gem 'mini_magick'
+
+# Fog for Amazon S3/etc
+gem 'fog'
