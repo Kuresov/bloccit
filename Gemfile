@@ -74,3 +74,6 @@ gem 'mini_magick'
 
 # Fog for Amazon S3/etc
 gem 'fog'
+
+# Pagination
+gem 'will_paginate', '~> 3.0.5'
