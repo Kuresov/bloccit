@@ -10,12 +10,15 @@
     <% @posts.each do |post| %>
       <div class="media">
         <div class="media-body">
+          <div class="image-list">
+            <%= image_tag(post.featured.small.url) if post.featured? %>
+          </div>
           <h4 class="media-heading">
             <%= link_to (markdown_to_html post.title), [@topic, post] %>
           </h4>
           <small>
             <%= image_tag(post.user.avatar.tiny.url) if post.user.avatar? %>
-            submitted <%= time_ago_in_words(post.created_at) %> ago by <% post.user.name %><br />
+            submitted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.name %><br />
             <%= post.comments.count %> Comments
           </small>
         </div>
