@@ -11,7 +11,9 @@
       <%= image_tag(@post.featured.display.url) if @post.featured? %>
     </div>
     <p><%= markdown_to_html @post.body %></p>
-    <%= render partial: 'comments/form', locals: {topic: @topic, post: @post, comment: @comment } %>
+    <% if policy(Comment.new).create? %>
+      <%= render partial: 'comments/form', locals: {topic: @topic, post: @post, comment: @comment } %>
+    <% end %>
     <%= render @post.comments %>
   </div>
   <div class="col-md-4">
