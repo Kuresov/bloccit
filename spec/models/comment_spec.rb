@@ -1,7 +1,7 @@
-require 'rails helper'
+require 'rails_helper'
 
 describe Comment do
-  include Testfactories
+  include TestFactories
 
   describe "after_create" do
     before do
