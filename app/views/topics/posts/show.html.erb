@@ -15,7 +15,7 @@
     <% if policy(Comment.new).create? %>
       <%= render partial: 'comments/form', locals: {topic: @topic, post: @post, comment: @comment } %>
     <% end %>
-    <%= render @post.comments %>
+    <%= render partial: 'comments/comment', collection: @post.comments %>
   </div>
   <div class="col-md-4">
     <% if policy(@post).edit? %>
