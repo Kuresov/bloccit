@@ -14,6 +14,8 @@ group :development do
   gem 'sqlite3'
 end
 
+# Use Puma for local and production
+gem 'puma'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Bootstrap for CSS
