@@ -86,5 +86,8 @@ gem 'fog'
 # Pagination
 gem 'will_paginate', '~> 3.0.5'
 
-# New Relic 
+# New Relic
 gem 'newrelic_rpm'
+
+# Factory Girl
+gem 'factory_girl_rails'
